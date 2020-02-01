@@ -1,6 +1,6 @@
-var user = 'aromeu';
+var user = 'maps';
 var apiKey = 'default_public';
-var mapId = 'https://aromeu.carto.com/builder/9a5fe164-0590-4d62-af7d-533655cc99af/embed';
+var mapId = 'https://maps.query.city/user/maps/builder/43d8f824-0606-45eb-83a2-6a9f31842744/embed';
 var width = 30;
 var height = 20;
 var dpi = 300;
@@ -145,8 +145,8 @@ function loadMap() {
   rectangle = document.querySelector('#rect');
 
   let theMapId = sanitize(getMapId());
-  let tileLayer = `https://${user}.carto.com/api/v1/map/named/tpl_${theMapId}/1,0/{z}/{x}/{y}.png`
-
+//  let tileLayer = `https://${user}.carto.com/api/v1/map/named/tpl_${theMapId}/1,0/{z}/{x}/{y}.png`
+  let tileLayer = `https://maps.query.city/api/v1/map/named/tpl_${theMapId}/1,0/{z}/{x}/{y}.png`
   if (window.printLayer) {
     map.removeLayer(printLayer);
   } else {
